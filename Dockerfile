@@ -8,5 +8,11 @@ RUN cp cufflinks-2.2.1.Linux_x86_64/* /usr/local/bin/
 RUN rm -rf cufflinks*
 
 RUN pip install mercurial
+
 RUN hg clone https://toolshed.g2.bx.psu.edu/repos/devteam/cufflinks
 RUN cp cufflinks/cufflinks_wrapper.py /usr/local/bin/
+
+RUN hg clone https://toolshed.g2.bx.psu.edu/repos/devteam/cuffmerge
+RUN cp cuffmerge/cuffmerge_wrapper.py /usr/local/bin/
+
+RUN rm -rf cufflinks cuffmerge
