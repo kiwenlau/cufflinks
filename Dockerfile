@@ -15,4 +15,6 @@ RUN cp cufflinks/cufflinks_wrapper.py /usr/local/bin/
 RUN hg clone https://toolshed.g2.bx.psu.edu/repos/devteam/cuffmerge
 RUN cp cuffmerge/cuffmerge_wrapper.py /usr/local/bin/
 
+RUN chmod +x /usr/local/bin/*_wrapper.py
+
 RUN rm -rf cufflinks cuffmerge
