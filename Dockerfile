@@ -11,6 +11,9 @@ RUN pip install mercurial
 
 RUN hg clone https://toolshed.g2.bx.psu.edu/repos/devteam/cufflinks
 RUN cp cufflinks/cufflinks_wrapper.py /usr/local/bin/
+RUN git clone https://github.com/galaxyproject/galaxy /usr/local/galaxy
+RUN cd /usr/local/galaxy ; git checkout -b master origin/master
+RUN echo "export PYTHONPATH=/tmp/galaxy/lib" >> /root/.bashrc
 
 RUN hg clone https://toolshed.g2.bx.psu.edu/repos/devteam/cuffmerge
 RUN cp cuffmerge/cuffmerge_wrapper.py /usr/local/bin/
