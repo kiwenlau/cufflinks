@@ -1,6 +1,8 @@
 FROM python:2.7
 MAINTAINER nasuno@ascade.co.jp
 
+RUN apt-get update && apt-get -y install libcurl4-nss-dev
+
 WORKDIR /tmp
 ADD http://cole-trapnell-lab.github.io/cufflinks/assets/downloads/cufflinks-2.2.1.Linux_x86_64.tar.gz cufflinks-2.2.1.Linux_x86_64.tar.gz
 RUN tar zxf cufflinks-2.2.1.Linux_x86_64.tar.gz
