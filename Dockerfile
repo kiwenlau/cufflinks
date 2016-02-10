@@ -23,3 +23,7 @@ RUN cp cuffmerge/cuffmerge_wrapper.py /usr/local/bin/
 RUN chmod +x /usr/local/bin/*_wrapper.py
 
 RUN rm -rf cufflinks cuffmerge
+
+RUN chmod -R 777 /usr/local/galaxy
+
+# sudo docker build -t nasuno/cufflinks:2.2.1 .
