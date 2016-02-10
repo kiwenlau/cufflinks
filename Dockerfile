@@ -26,4 +26,4 @@ RUN rm -rf cufflinks cuffmerge
 
 RUN chmod -R 777 /usr/local/galaxy
 
-# sudo docker build -t nasuno/cufflinks:2.2.1 .
+# sudo docker build -t kiwenlau/cufflinks:2.2.1 .
